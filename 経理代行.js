@@ -7,18 +7,18 @@
 
     kintone.events.on('app.record.index.show',function(event) {
 
-        if (document.getElementById('my_index_button2') !== null) {
+        if (document.getElementById('my_index_button') !== null) {
             return;
         }
 
-        var myIndexButton2 = document.createElement('button');
-        myIndexButton2.id = 'my_index_button2';
-        myIndexButton2.innerText = '予定登録';
-        myIndexButton2.setAttribute('class','kintoneplugin-button-normal');
-        kintone.app.getHeaderMenuSpaceElement().appendChild(myIndexButton2);
+        var myIndexButton = document.createElement('button');
+        myIndexButton.id = 'my_index_button';
+        myIndexButton.innerText = '予定登録';
+        myIndexButton.setAttribute('class','kintoneplugin-button-normal');
+        kintone.app.getHeaderMenuSpaceElement().appendChild(myIndexButton);
 
             // ボタンクリック時の処理
-        myIndexButton2.onclick = function() {
+        myIndexButton.onclick = function() {
             var Month = prompt('入力したいのは何月分ですか？');
             //桁を２に統一
             Month = ('00' + Month).slice(-2);
