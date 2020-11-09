@@ -2,6 +2,7 @@
 
 (function() {
     "use strict";
+    
     kintone.events.on("portal.show", async()=> {
 
         function NOTIFICATION(check,id){
@@ -51,10 +52,8 @@
                         }
                     }
                 };
-
-        const presp = await kintone.api('/k/v1/record','PUT',pbody);
-        console.log(presp);
-
+                const presp = await kintone.api('/k/v1/record','PUT',pbody);
+                console.log(presp);
             }
         }
     });
